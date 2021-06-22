@@ -10,4 +10,14 @@ class User < ActiveRecord::Base
         Cart.create(user: self, beanie_baby: beanie_baby, quantity: 1)
         end
     end
+
+    def edit_cart(number, beanie_baby)
+        cart = self.carts.find_by(beanie_baby: beanie_baby)
+        cart.update(id: cart.id, :quantity => number)
+    end
+
+    def delete_beanie(beanie_baby)
+       cart = self.carts.find_by(beanie_baby: beanie_baby)
+       cart.destroy
+    end
 end
