@@ -167,60 +167,60 @@ BeanieBaby.create(name: "Inky the Octopus – Pink",
     Inky can help because he has eight!"
 )
 
-    BeanieBaby.create(name: "Tabasco the Bull", 
-        price: 25, 
-        animal: "Bull", 
-        image_url: "https://beaniepedia.com/beanies/files/2020/08/tabasco-380x380.jpeg",
-        swing_tag: 20,
-        poem: "Although Tabasco is not so tall
-        He loves to play basketball
-        He is a star player in his dream
-        Can you guess his favorite team?"
-    )
+BeanieBaby.create(name: "Tabasco the Bull", 
+    price: 25, 
+    animal: "Bull", 
+    image_url: "https://beaniepedia.com/beanies/files/2020/08/tabasco-380x380.jpeg",
+    swing_tag: 20,
+    poem: "Although Tabasco is not so tall
+    He loves to play basketball
+    He is a star player in his dream
+    Can you guess his favorite team?"
+)
 
-        BeanieBaby.create(name: "Happy the Hippopotamus", 
-            price: 500, 
-            animal: "Hippo", 
-            image_url: "https://beaniepedia.com/beanies/files/2020/03/happylavendar.jpg",
-            swing_tag: 21,
-            poem: "Happy the Hippo loves to wade
-            In the river and in the shade
-            When Happy shoots water out of his snout
-            You know he’s happy without a doubt!"
-        )
-        BeanieBaby.create(name: "Peanut the Elephant", 
-            price: 7000, 
-            animal: "Elephant", 
-            image_url: "https://beaniepedia.com/beanies/files/2019/01/peanutroyalblue.jpg",
-            swing_tag: 22,
-            poem: "Peanut the elephant walks on tip-toes
-            Quietly sneaking wherever she goes
-            She’ll sneak up on you and a hug
-            You will get
-            Peanut is a friend you won’t soon forget!"
-        )
-        BeanieBaby.create(name: "Seaweed the Otter", 
-            price: 500, 
-            animal: "Otter", 
-            image_url: "https://beaniepedia.com/beanies/files/2021/03/seaweed-380x380.jpeg",
-            swing_tag: 23,
-            poem: "Seaweed is what she likes to eat
-            It’s supposed to be a delicious treat
-            Have you tried a treat from the water
-            If you haven’t, maybe you “otter”!"
+BeanieBaby.create(name: "Happy the Hippopotamus", 
+    price: 500, 
+    animal: "Hippo", 
+    image_url: "https://beaniepedia.com/beanies/files/2020/03/happylavendar.jpg",
+    swing_tag: 21,
+    poem: "Happy the Hippo loves to wade
+    In the river and in the shade
+    When Happy shoots water out of his snout
+    You know he’s happy without a doubt!"
+)
+BeanieBaby.create(name: "Peanut the Elephant", 
+    price: 7000, 
+    animal: "Elephant", 
+    image_url: "https://beaniepedia.com/beanies/files/2019/01/peanutroyalblue.jpg",
+    swing_tag: 22,
+    poem: "Peanut the elephant walks on tip-toes
+    Quietly sneaking wherever she goes
+    She’ll sneak up on you and a hug
+    You will get
+    Peanut is a friend you won’t soon forget!"
+)
+BeanieBaby.create(name: "Seaweed the Otter", 
+    price: 500, 
+    animal: "Otter", 
+    image_url: "https://beaniepedia.com/beanies/files/2021/03/seaweed-380x380.jpeg",
+    swing_tag: 23,
+    poem: "Seaweed is what she likes to eat
+    It’s supposed to be a delicious treat
+    Have you tried a treat from the water
+    If you haven’t, maybe you “otter”!"
 
-        )
-        BeanieBaby.create(name: "Weenie the Dog", 
-            price: 6000, 
-            animal: "Dog", 
-            image_url: "https://beaniepedia.com/beanies/files/2020/09/weenie-380x380.jpg",
-            swing_tag: 24,
-            poem: "Weenie the dog is quite a sight
-            Long of body and short of height
-            He perches himself high on a log
-            and considers himself to be top dog!"
+)
+BeanieBaby.create(name: "Weenie the Dog", 
+    price: 6000, 
+    animal: "Dog", 
+    image_url: "https://beaniepedia.com/beanies/files/2020/09/weenie-380x380.jpg",
+    swing_tag: 24,
+    poem: "Weenie the dog is quite a sight
+    Long of body and short of height
+    He perches himself high on a log
+    and considers himself to be top dog!"
             
-        )
+)
 puts "Seeding users..."
 User.create(name: "Leon", password: "iluvbeanies")
 
