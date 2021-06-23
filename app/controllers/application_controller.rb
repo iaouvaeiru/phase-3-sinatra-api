@@ -17,5 +17,13 @@ class ApplicationController < Sinatra::Base
   # method "URL" do
     
   # end
+  # get '/hi' do
+  #   {hello: "world"}.to_json
+  # end
+
+  get "/beanies" do
+    beanies = BeanieBaby.all
+    beanies.to_json(include: {carts: {include: :beanie_baby}}, methods: [])
+  end
 
 end
