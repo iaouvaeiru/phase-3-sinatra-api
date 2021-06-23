@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
        cart = self.carts.find_by(beanie_baby: beanie_baby)
        cart.destroy
     end
+    
     def purchase
         self.carts.destroy_all
     end
