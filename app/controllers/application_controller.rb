@@ -14,6 +14,21 @@ class ApplicationController < Sinatra::Base
     200
   end
 
+  get "/beanies" do
+    beanies = BeanieBaby.all
+    beanies.to_json(include: {carts: {include: :user}}, methods: [])
+  end
+
+  get"/cart" do
+    cart = Cart.all
+    cart.to_json()
+  end
+
+  get "/users" do
+    users = User.all
+    users.to_json(include: :carts)
+  end
+
   # method "URL" do
     
   # end
