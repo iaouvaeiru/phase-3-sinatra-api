@@ -14,16 +14,34 @@ class ApplicationController < Sinatra::Base
     200
   end
 
-  # method "URL" do
-    
-  # end
-  # get '/hi' do
-  #   {hello: "world"}.to_json
-  # end
+  get "/beanies" do
+    beanies = BeanieBaby.all
+    beanies.to_json(include: {carts: {include: :user}}, methods: [])
+  end
+
+  get"/cart" do
+    cart = Cart.all
+    cart.to_json()
+  end
+
+  get "/users" do
+    users = User.all
+    users.to_json(include: :carts)
+  end
+
 
   get "/beanies" do
     beanies = BeanieBaby.all
     beanies.to_json(include: {carts: {include: :beanie_baby}}, methods: [])
+  end
+
+  post "/login" do
+    user = User.find_by(name: params[:name], password: params[:password])
+    if user.nil?
+      {error: "incorrect username or password"}.to_json
+    else 
+      user.to_json(include: :carts)
+    end
   end
 
 end
