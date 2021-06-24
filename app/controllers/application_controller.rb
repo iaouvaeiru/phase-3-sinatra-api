@@ -19,9 +19,9 @@ class ApplicationController < Sinatra::Base
     beanies.to_json(include: {carts: {include: :user}}, methods: [])
   end
 
-  get"/cart" do
+  get "/cart" do
     cart = Cart.all
-    cart.to_json()
+    cart.to_json(include: :beanie_baby)
   end
 
   get "/users" do
@@ -42,6 +42,16 @@ class ApplicationController < Sinatra::Base
     else 
       user.to_json(include: :carts)
     end
+  end
+
+  post "/addBeanieToCart" do
+    user = User.all.find(params[:user_id])
+    add_to_cart = user.add_to_cart(params[:beanie_baby_id]).to_json(include: :beanie_baby)
+  end
+
+  post "/removeBeanieFromCart" do
+    user = User.all.find(params[:user_id])
+    user.delete_beanie(params[:beanie_baby_id]).to_json
   end
 
 end
