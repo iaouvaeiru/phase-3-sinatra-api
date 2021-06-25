@@ -54,4 +54,9 @@ class ApplicationController < Sinatra::Base
     user.delete_beanie(params[:beanie_baby_id]).to_json
   end
 
+  patch "/updateBeanieQuantity" do
+    user = User.all.find(params[:user_id])
+    user.edit_cart(params[:quantity], params[:beanie_baby_id]).to_json(include: :beanie_baby)
+  end
+
 end
